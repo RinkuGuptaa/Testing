@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Enroll · Google Sheets auto-save</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="card">
+    <h1>
+      📚 Course enrollment
+      <span>auto-save</span>
+    </h1>
+    <div class="subhead">
+      Select a course · fill your details · data saves to <code>Google Sheet</code> in real‑time
+    </div>
+
+    <!-- Course selection grid -->
+    <div class="grid" id="courseGrid">
+      <div class="course-option" data-course="Web Development Fundamentals" data-code="WEB101">
+        <div class="course-icon">🌐</div>
+        <div class="course-title">Web Development</div>
+        <div class="course-desc">HTML, CSS, JS · build modern sites</div>
+        <div class="course-meta">8 weeks · beginner</div>
+      </div>
+      <div class="course-option" data-course="Data Science with Python" data-code="DS202">
+        <div class="course-icon">📊</div>
+        <div class="course-title">Data Science</div>
+        <div class="course-desc">Pandas, NumPy, visualization</div>
+        <div class="course-meta">10 weeks · intermediate</div>
+      </div>
+      <div class="course-option" data-course="UI/UX Design Masterclass" data-code="UIX303">
+        <div class="course-icon">🎨</div>
+        <div class="course-title">UI/UX Design</div>
+        <div class="course-desc">Figma, prototyping, user research</div>
+        <div class="course-meta">6 weeks · all levels</div>
+      </div>
+      <div class="course-option" data-course="Cloud Architecture on AWS" data-code="AWS404">
+        <div class="course-icon">☁️</div>
+        <div class="course-title">Cloud Architecture</div>
+        <div class="course-desc">EC2, S3, Lambda, best practices</div>
+        <div class="course-meta">12 weeks · advanced</div>
+      </div>
+    </div>
+
+    <!-- User details -->
+    <div class="user-info">
+      <div class="input-group">
+        <label for="fullName">Full name</label>
+        <input type="text" id="fullName" placeholder="e.g. Alex Rivera" autocomplete="name">
+      </div>
+      <div class="input-group">
+        <label for="email">Email address</label>
+        <input type="email" id="email" placeholder="alex@example.com" autocomplete="email">
+      </div>
+    </div>
+
+    <!-- Action + status -->
+    <div class="action-bar">
+      <button class="btn" id="enrollBtn">
+        ✦ Enroll now
+      </button>
+      <div class="status-message info" id="statusMessage">
+        ⚡ Select a course and fill the form
+      </div>
+    </div>
+    <div class="footer-note">
+      Google Apps Script backend · data saved to your sheet
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
